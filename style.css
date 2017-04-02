@@ -1,0 +1,198 @@
+/*.navbar {
+  z-index: 9;
+  background-color: black;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+#nav-bar ul li:hover::after {
+  width: 100%;
+}
+
+#nav-bar ul li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  background: #607D8B;
+  width: 0;
+  transition: width 0.2s;
+}
+*/
+
+h1,h2,h3,h4 {
+  font-family: 'Lato';
+  font-weight: 600;
+  text-align: center;
+  color: black; 
+  margin: 20px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.30);
+}
+
+.productora{
+	color: white;
+	letter-spacing: -1px;
+	padding: 5px 0;
+	font-weight: 800;
+}
+
+footer{
+  font-family: 'Lato';
+  text-align: center;
+  color: black; 
+  margin-top: 20px;
+}
+
+#portada{
+	/*  https://uigradients.com/#   Forest */
+	background: #5A3F37; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #5A3F37 , #2C7744); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #5A3F37 , #2C7744); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	background: 100%, url("https://i.ytimg.com/vi/GV0uKTyBalo/maxresdefault.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-width: 300px;
+	min-height: 400px;
+}
+
+.wrap{
+	text-align: center;
+	margin-top: 270px;
+}
+
+.btn, .btn:link, .btn:visited {
+  border-radius: 5%;
+  padding: 13px 0;
+  margin: 10px;
+  border: 2px solid white;
+  box-shadow: 2px 2px 6px #999999;
+  -moz-box-shadow: 2px 2px 6px #999999;
+  -webkit-box-shadow: 2px 2px 6px #999999;
+
+  color: Khaki;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+
+  transition: all .2s ease-in-out;
+}
+
+a.btn:hover {
+	background: DarkGreen; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, DarkGreen , #141517); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left,DarkGreen , #141517); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.gallery {
+  margin: 15px auto;
+  text-align: center;
+  max-width: 900px;
+}
+
+.gallery-item-wrapper {
+  margin: 10px auto;
+  display: inline-block;
+  
+  height: 236px; /* WITH BOTTOM DESCRIPTION: 216px */
+  width: 295px; /* 295px */
+  position: relative;
+}
+
+.gallery-image {
+  height: 166px;
+  width: 295px;
+  
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  transition: all .3s ease;
+  position: absolute;
+}
+
+.gallery-image:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: LightGrey;
+  opacity: 0;
+ 
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  transition: all .5s ease;
+}
+
+.gallery-image:hover:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  opacity: .7;
+}
+
+.text {
+  position: relative;
+  top: 165px;
+  display: inline-block;
+  
+  font: 100 16px 'Lato';
+  margin: 0 auto;
+  text-align: center;
+  width: 295px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #111;
+  color: #fff;
+  border-top: 1px solid #eee;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  letter-spacing: .7px;
+  line-height: 1.2;
+}
+
+.span-text {
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  font-size: 19px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+
+#contacto{
+	/*  https://uigradients.com/#  Honey Dew*/
+	background: #43C6AC; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #43C6AC , #F8FFAE); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #43C6AC , #F8FFAE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.contactIcons{
+  text-align: center;
+  color: steelblue; 
+  font-size: 3em;
+  margin: 20px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.30);
+}
+
+.container {
+  border-radius: 5%;
+  width: 60vw;
+  max-width: 45em;
+  padding: 1em 1em;
+  margin: 5% auto;
+  background: rgba(255, 255, 255, .75);
+  box-shadow: .5em .5em .5em rgba(0, 0, 0, .4);
+}
