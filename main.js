@@ -1,3 +1,10 @@
+/*
+BaluProductora
+- - - - - - - - - -
+https://github.com/DizNicolasAmor/BaluProductora
+Author:  Diz, Nicolás Amor
+*/
+
 $(document).ready(function() {
 	var showMail = false; 
 
