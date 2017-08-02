@@ -41,58 +41,7 @@ h1,h2,h3,h4 {
   cursor: default;
 }
 
-footer{
-  font-family: 'Lato';
-  text-align: center;
-  color: black; 
-  margin-top: 20px;
-  cursor: default;
-}
 
-#portada{
-  /*  https://uigradients.com/#   Forest */
-  background: #5A3F37; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #5A3F37 , #2C7744); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #5A3F37 , #2C7744); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  background: 100%, url("https://i.ytimg.com/vi/GV0uKTyBalo/maxresdefault.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.wrap{
-  text-align: center;
-  margin-top: 30%;
-}
-.wrap2{
-  text-align: center;
-}
-
-.btn, .btn:link, .btn:visited {
-  border-radius: 5%;
-  padding: 13px 0;
-  margin: 10px;
-  border: 2px solid white;
-  box-shadow: 2px 2px 6px #999999;
-  -moz-box-shadow: 2px 2px 6px #999999;
-  -webkit-box-shadow: 2px 2px 6px #999999;
-
-  color: Khaki;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 2px;
-
-  transition: all .2s ease-in-out;
-}
-
-a.btn:hover {
-  background: DarkGreen; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, DarkGreen , #141517); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left,DarkGreen , #141517); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: Khaki;
-}
 
 .gallery {
     margin: auto;
