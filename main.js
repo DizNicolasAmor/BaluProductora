@@ -1,36 +1,88 @@
 /*
-BaluProductora
-- - - - - - - - - -
-https://github.com/DizNicolasAmor/BaluProductora
-Author:  Diz, Nicolás Amor
+*Nico Diz
+*https://github.com/DizNicolasAmor
 */
 
 $(document).ready(function() {
 
-	// show/hide mail
-	var showMail = false; 
-	$('#mail').click(function(){
-		if(showMail == false){
-			showMail = true;
-			$('#mailContainer').removeClass('hide');
-		}else{
-			showMail = false;
-			$('#mailContainer').addClass('hide');
-		}
-	});
+  var backgroundID = 1, 
+      footerActive = false; 
 
-	// refresh videos 
-    // two rows are shown by default (row0 and row1).
-  var rowsShown = 1;
-  // refresh button
-  $('#masVideos').click(function(){
-    rowsShown++;
-    if(rowsShown <= 6){
-      $('#row'+rowsShown).removeClass('hide');
+  function reset(){
+    //close modal
+    //...my code here... 
+
+    //reset footer animations
+    if(footerActive = true){
+      footerActive = false;
+      $('footer').animate({height: '-=20%'}, 800);
+      $('#footerIcons').animate({fontSize: '1em', marginLeft: '-=20%'}, "slow");
+      $('#footerText').animate({fontSize: '1em', marginRight: '-=20%', }, "slow");
     }
-    rowsShown++;
-    if(rowsShown <= 6){
-      $('#row'+rowsShown).removeClass('hide');
+  }
+
+
+  //intro
+  $('#homeText').hide();
+  $('#logo').hide().delay(600);  
+  $('#logo').fadeIn('slow', function(){
+    $(this).delay(600).animate({top: '60px', right: '90%', left: '5%', fontSize: '4vw'}, 2400, function(){
+      $('#homeText').fadeIn('slow').animate({left: '60%', right: '5%'}, 1800);
+      //...home text animation...
+    });
+  });
+
+
+
+  /* I want <navbar> to collapse when I click, but if the <navbar> 
+is displayed along on a large screen, simply do nothing. */
+  $(".navbar-collapse").collapse('hide');
+
+  $('.navbar-collapse a').click(function(){
+    $(".navbar-collapse").collapse('hide');
+  });
+
+
+  //brand -> change background
+  $('.navbar-brand').click(function(){
+    backgroundID++;
+    if(backgroundID > 5) backgroundID = 1;
+    $('#background').fadeOut(800, function(){
+     $(this).css('background', 'linear-gradient(rgba(50, 50, 250, 0.5), rgba(0, 0, 0, 0.5)), url("images/background' + backgroundID + '.png") no-repeat center center').fadeIn(800);
+     $(this).css('-moz-background-size', 'cover');
+     $(this).css('-o-background-size', 'cover');
+     $(this).css('background-size', 'cover');
+    });
+  });
+
+  //contacto -> footer
+  $('#menuContacto').click(function(){
+    if(!footerActive){
+      footerActive = true;
+      $('footer').animate({height: '+=20%'}, 800);
+      $('#footerIcons').animate({fontSize: '1.5em', marginLeft: '+=20%'}, "slow");
+      $('#footerText').animate({fontSize: '1.5em', marginRight: '+=20%', }, "slow");      
+    }
+    else{
+      reset();
     }
   });
+
+
+  //...modal: container appear and others... 
+
+  //videoclips slider
+  var slider = $('#slider'),
+      moveSlider = function() {
+        slider.animate({marginLeft:'-=200%'} ,700, function(){
+          $('#slider .slider__section:first').insertAfter('#slider .slider__section:last');
+          slider.css('margin-left', '-100%');
+        });
+      }
+
+  $('#slider .slider__section:first').insertAfter('#slider .slider__section:last');
+  slider.css('margin-left', '-100%');
+  
+  $('#moreProjects').click(moveSlider());
+
 });
