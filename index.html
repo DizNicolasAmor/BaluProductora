@@ -1,9 +1,8 @@
 <!--
-BaluProductora
-- - - - - - - - - -
-https://github.com/DizNicolasAmor/BaluProductora
-Author:  Diz, Nicolás Amor
+Nico Diz
+https://github.com/DizNicolasAmor
 -->
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -21,230 +20,71 @@ Author:  Diz, Nicolás Amor
     <link rel="stylesheet" href="style.css">
     
     <!-- font-awesome -->
-    <link rel="stylesheet" href="http:////netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
     <div id="background"></div>
-	  
+
     <nav id="nav-bar" class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Menu</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand animated flip">BALÚ - Productora</a>
-          </div>
-          <div class="collapse navbar-collapse" id="navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Presentación</a></li>
-              <li><a href="#">Info Técnica</a></li>
-              <li><a href="#">Catálogo</a></li>
-              <li><a href="#">Otros Trabajos</a></li>
-              <li><a href="#">Contacto</a></li>
-            </ul>
-          </div>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle hvr-bounce-to-bottom collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">BALÚ - Productora</a>
         </div>
-      </nav>
-
-    <!-- portada -->    
-    <section id="portada" class="container-fluid">
-        <h1 class="productora">PRODUCTORA</h1>
-        <div class="wrap">
-          <a href="#portfolio" class="btn">Conocenos</a>
-          <a href="#contacto" class="btn">Contactanos</a>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" id="menuPresentación">Presentación</a></li>
+            <li><a href="#" id="menuInfoTecnica">Info Técnica</a></li>
+            <li><a href="#" id="menuVideoclips">Videoclips</a></li>
+            <li><a href="#" id="menuOtrosTrabajos">Otros Trabajos</a></li>
+            <li><a href="#" id="menuContacto">Contacto</a></li>
+          </ul>
         </div>
-    </section>
-    <!-- end of portada -->
-
-
-    <!-- portfolio -->
-    <section id="portfolio">
-      <h1>-Nuestro trabajo-</h1>
-
-      <ul class="gallery">
-
-      	<div id="row0">
-      		<!-- CHANZA -->
-      		<li class="gallery-item-wrapper">
-      			<a class="gallery-image" href="https://www.youtube.com/watch?v=yuGZTf5m3So" target="_blank" ><img src="https://i.ytimg.com/vi/yuGZTf5m3So/hqdefault.jpg" height="166px" width="295px" />
-      			</a>
-      			<div class="text"><span class="span-text">CHANZA</span>
-      				<br> "Iluminado en el Final" - "Esperando por el Boomerang"</div>
-      		</li>
-
-     		<!-- GATIVIDEO -->
-     		<li class="gallery-item-wrapper">
-     			<a class="gallery-image" href="https://www.youtube.com/watch?v=bV_hG-PJjIM" target="_blank" ><img src="https://i.ytimg.com/vi/bV_hG-PJjIM/hqdefault.jpg" height="166px" width="295px" />
-     			</a>
-     			<div class="text"><span class="span-text">GATIVIDEO</span>
-     				<br>"Bruce Willis" - "Fantástico Bailable" - "Somebody Else's Guy"</div>
-      		</li>
-      	</div>
-
-        <div id="row1">
-	       	<!-- KAISER CHOLO -->
-        	<li class="gallery-item-wrapper">
-        		<a class="gallery-image" href="https://www.youtube.com/watch?v=oE2tBLJlllI" target="_blank" ><img src="https://i.ytimg.com/vi/oE2tBLJlllI/hqdefault.jpg" height="166px" width="295px" />
-        		</a>
-        		<div class="text"><span class="span-text">KAISER CHOLO</span>
-        			<br>"Lulú"</div>
-       		</li>
-
-       		<!-- COREY FOGEL -->
-       		<li class="gallery-item-wrapper">
-       			<a class="gallery-image" href="https://www.youtube.com/watch?v=GV0uKTyBalo" target="_blank" ><img src="https://i.ytimg.com/vi/GV0uKTyBalo/maxresdefault.jpg" height="166px" width="295px" />
-       			</a>
-       			<div class="text"><span class="span-text">COREY FOGEL</span>
-       				<br>"Toma III"</div>
-    		</li>
-   		</div>
-
-      	<div id="row2" class="hide">
-      		<!-- MOTONETA -->
-      		<li class="gallery-item-wrapper">
-      			<a class="gallery-image" href="https://www.youtube.com/watch?v=xO4vjzYRsQM" target="_blank" ><img src="https://i.ytimg.com/vi/xO4vjzYRsQM/hqdefault.jpg" height="166px" width="295px" />
-      			</a>
-      			<div class="text"><span class="span-text">MOTONETA</span>
-      				<br> "No soy un rifle" - "El sueño ácido del pelado"</div>
-      		</li>
-
-      		<!-- ENELOTROMUNDO QUARTETO -->
-      		<li class="gallery-item-wrapper">
-      			<a class="gallery-image" href="https://www.youtube.com/watch?v=RMFefdAETvs" target="_blank" ><img src="https://i.ytimg.com/vi/RMFefdAETvs/hqdefault.jpg" height="166px" width="295px" />
-      			</a>
-      			<div class="text"><span class="span-text">ENELOTROMUNDO QUARTETO</span>
-      				<br>"Bancate Ese Defecto" (Charly García)</div>
-      		</li>
-      	</div>
-
-      	<div id="row3" class="hide">
-   			<!-- MENE -->
-   			<li class="gallery-item-wrapper">
-   				<a class="gallery-image" href="https://www.youtube.com/watch?v=Z7NZwbiqjOs" target="_blank" ><img src="https://i.ytimg.com/vi/Z7NZwbiqjOs/hqdefault.jpg" height="166px" width="295px" />
-   				</a>
-   				<div class="text"><span class="span-text">MENE</span>
-   					<br>"Dame de Beber" - "La Felicidad"</div>
-   			</li>
-
-   			<!-- MAO -->
-   			<li class="gallery-item-wrapper">
-   				<a class="gallery-image" href="https://www.youtube.com/watch?v=XRHrqjsXhm8" target="_blank" ><img src="https://i.ytimg.com/vi/XRHrqjsXhm8/maxresdefault.jpg" height="166px" width="295px" />
-   				</a>
-   				<div class="text"><span class="span-text">MAO</span>
-   					<br>"Estática"</div>
-   			</li>
-      	</div>
-
-      	<div id="row4" class="hide">
-   			<!-- TRAPALANDA -->
-   			<li class="gallery-item-wrapper">
-   				<a class="gallery-image" href="https://www.youtube.com/watch?v=OFxppY_lJFk" target="_blank" ><img src="https://i.ytimg.com/vi/OFxppY_lJFk/hqdefault.jpg" height="166px" width="295px" />
-   				</a>
-   				<div class="text"><span class="span-text">TRAPALANDA</span>
-   					<br>"Muertos en la tarde" - "Sur II"</div>
-   			</li>
-
-   			<!-- CAMILA BUCH -->
-   			<li class="gallery-item-wrapper">
-   				<a class="gallery-image" href="https://www.youtube.com/watch?v=jwa1LpaMsss" target="_blank" ><img src="https://i.ytimg.com/vi/jwa1LpaMsss/hqdefault.jpg" height="166px" width="295px" />
-   				</a>
-   				<div class="text"><span class="span-text">CAMILA BUCH</span>
-   					<br>"La Verdad"</div>
-   			</li>
-      	</div>
-
-      	<div id="row5" class="hide">
-   			<!-- BIS SERÁN -->
-   			<li class="gallery-item-wrapper">
-   				<a class="gallery-image" href="https://www.youtube.com/watch?v=m_h4rhvJ6S0" target="_blank" ><img src="https://i.ytimg.com/vi/m_h4rhvJ6S0/hqdefault.jpg" height="166px" width="295px" />
-   				</a>
-   				<div class="text"><span class="span-text">BIS SERÁN</span>
-   					<br>"Desde Mi Lugar" - "Adelante"</div>
-   			</li>
-
-   			<!-- LUIZA -->
-   			<li class="gallery-item-wrapper">
-   				<a class="gallery-image" href="https://www.youtube.com/watch?v=Y1ctgL8lC80" target="_blank" ><img src="https://i.ytimg.com/vi/Y1ctgL8lC80/hqdefault.jpg" height="166px" width="295px" />
-   				</a>
-   				<div class="text"><span class="span-text">LUIZA</span>
-   					<br>"Já não somos dois" - "Carta ao Tom 74"</div>
-   			</li>
-      	</div>
-
-      	<div id="row6" class="hide">
-   			<!-- TOMI AIELLO -->
-   			<li class="gallery-item-wrapper">
-   				<a class="gallery-image" href="https://www.youtube.com/watch?v=bqhqDww1EjI" target="_blank" ><img src="https://i.ytimg.com/vi/bqhqDww1EjI/hqdefault.jpg" height="166px" width="295px" />
-   				</a>
-   				<div class="text"><span class="span-text">TOMI AIELLO</span>
-   					<br>"Transparente"</div>
-   			</li>
-
-   			<!-- FRAN Y TOMI  -->
-   			<li class="gallery-item-wrapper">
-   				<a class="gallery-image" href="https://www.youtube.com/watch?v=UNm7BSgnEmg" target="_blank" ><img src="https://i.ytimg.com/vi/UNm7BSgnEmg/hqdefault.jpg" height="166px" width="295px" />
-   				</a>
-   				<div class="text"><span class="span-text">FRAN Y TOMI</span>
-   					<br>"Impro I"</div>
-   			</li>
-      	</div>
-
-      </ul>
-
-      <div class="wrap2">
-        <button id="masVideos" class="btn">Ver más videos...</button>
       </div>
-
-    </section>
-    <!-- end of portfolio -->
+    </nav>
 
 
-    <!-- contacto -->
-    <section id="contacto">
-      <h1> -Contacto- </h1>
 
-      <div class="text-center">
+  <div id="logo" class="title">BALÚ</div>
+
+
+  <div id="homeText" class="subtitle">Acá va una
+    <br>frase copada</div>
+  </div>
+
+
+    <footer>
+      <div id="footerIcons" class="pull-left">
         <!-- mail icon -->
-        <a id="mail" class="contactIcons" href="#contacto" title="Mail"><i class="fa fa-envelope"></i></a>
-
+        <a id="mail" class="contactIcons" href="mailto:BaluAviMedia@gmail.com" title="Mail"><i class="fa fa-envelope"></i></a>
         <!-- facebook icon -->
         <a class="contactIcons" href="https://www.facebook.com/baluavimedia" target="_blank" title="Facebook">
           <i class="fa fa-facebook-square"></i>
         </a>
-
         <!-- youtube icon -->
         <a class="contactIcons" href="https://www.youtube.com/channel/UCp_kJhcxV0sJQh1a7Zfd-kg" target="_blank" title="Youtube">
           <i class="fa fa-youtube"></i>
         </a>
       </div>
-
-      <div id="mailContainer" class="container hide">
-        <h3>Podés escribirnos a: </h3>
-        <h4>
-          <a href="mailto:BaluAviMedia@Gmail.com">BaluAviMedia@gmail.com</a>
-        </h4>
+      <div id="footerText">BaluAviMedia@gmail.com
+        <br>Buenos Aires, Argentina
       </div>
-
-      <footer>2017 - Buenos Aires, Argentina.</footer>
-    </section>
-    <!-- end of contacto -->
-
-
+    </footer>
+    
     <!-- jQuery-->
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-
+    
     <!-- my js file-->
     <script src="main.js" type="text/javascript" charset="utf-8"></script>
 
     <!-- bootstrap js -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
-
   </body>
 </html>
