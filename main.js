@@ -50,10 +50,51 @@ $(document).ready(function() {
   $('#logo').hide().delay(600);  
   $('#logo').fadeIn('slow', function(){
     $(this).delay(600).animate({top: '60px', right: '90%', left: '5%', fontSize: '4vw'}, 2400, function(){
-      $('#homeText').fadeIn('slow').animate({left: '60%', right: '5%'}, 1800);
-      //...home text animation...
+      $('#homeText').fadeIn('slow').animate({left: '60%', right: '5%'}, 1800, function(){
+        setTimeout(function(){typeDelete();},3000);
+      });
     });
   });
+
+  //  typing effect used in intro 
+  var arrayPos = 0, 
+      words = ['que cambia ', 'cada tres ', 'segundos. ', 'frase copada '];
+
+  function typeDelete(){
+    var initialLength = $('#animatedText').html().length;
+    for(i = 0; i < initialLength; i++){
+      speed = 200;
+      setTimeout(function(){
+      var sentence = $('#animatedText').html().split('');
+      sentence.pop();
+      $('#animatedText').html(sentence);
+      }, speed * i); 
+    }
+    setTimeout(function(){
+      typeWrite();
+    }, speed * initialLength);
+  }
+
+  function typeWrite(){
+    currentWord = words[arrayPos];
+    currentWordPos = 0;
+    if(currentWord == undefined){
+      arrayPos = 0;
+      currentWord = words[arrayPos];
+    }
+    for(i = 0; i < currentWord.length; i++){
+      setTimeout(function(){
+        var sentence = $('#animatedText').html();
+        sentence += currentWord[currentWordPos];
+        $('#animatedText').html(sentence);
+        currentWordPos++;
+      }, speed * i); 
+    }
+    setTimeout(function(){
+      arrayPos++
+      typeDelete();
+    }, currentWord.length * speed + 3000)
+  }
 
 
 
