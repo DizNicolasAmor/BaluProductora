@@ -1,72 +1,159 @@
 /*
-BaluProductora
-- - - - - - - - - -
-https://github.com/DizNicolasAmor/BaluProductora
-Author:  Diz, Nicolás Amor
+*Nico Diz
+*https://github.com/DizNicolasAmor
 */
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Sansita|Kalam');
 
 .navbar {
   z-index: 9;
-  background-color: black;
+  background: rgba(0, 0, 0, 0.5) !important;
+  color: White; 
+  cursor: default;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
 }
 
-#nav-bar ul li::after {
-  content: '';
-  position: absolute;
+#background {
+  content: "";
+  display: block;
+  position: fixed;
   left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #53346D, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #53346D, #000000);
+  background: linear-gradient(rgba(50, 50, 250, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/background1.png") no-repeat center center;  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+footer{
+  font-size: 1em !important;
+  width: 100%;
+  padding: 10px;
   bottom: 0;
-  height: 3px;
-  background: #607D8B;
-  width: 0;
-  transition: width 0.2s;
-}
-
-h1,h2,h3,h4 {
-  font-family: 'Lato';
-  font-weight: 600;
-  text-align: center;
-  color: black; 
-  margin: 20px;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.30);
-  cursor: default;
-}
-
-.productora{
+  position: fixed;
   color: white;
-  letter-spacing: -1px;
-  padding: 5px 0;
-  font-weight: 800;
+  text-align: right;
+  background-color: black;
+  opacity: 0.5;
   cursor: default;
 }
 
-
-
-.gallery {
-    margin: auto;
-    list-style: none;
-    padding: 10px;
-    box-sizing: border-box;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.contactIcons{
+  color: GhostWhite; 
+  font-size: 2em;
+  margin: 10px;
 }
 
-.gallery-item-wrapper {
-  margin: 10px auto;
+.contactIcons:hover{
+  color: Moccasin !important;
+}
+
+#logo{
+  font-family: 'Kalam', sans-serif !important;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  color: Khaki !important;
+}
+
+#homeText{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+}
+
+.title, .subtitle{
+  font-family: 'Sansita', sans-serif;
+  color: White;
+  text-align: center;  
+  margin:0;
+  cursor: default;
+  letter-spacing: .7px;
+  line-height: 1.2;
+}
+.title{font-size: 6vw;}
+
+.subtitle{font-size: 4vw;}
+
+#animatedText:after{
   display: inline-block;
-  
-  height: 236px; /* WITH BOTTOM DESCRIPTION: 216px */
-  width: 295px; /* 295px */
+  height: 4vw;
+  width: 3px;
+  background: white;
+  content: '';
+  position: relative;
+  top: 7px;
+  -webkit-animation: blink .8s infinite;
+  animation: blink .8s infinite;
+  }
+@-webkit-keyframes blink{
+  from{ opacity: 0;}
+  to{opacity: 1}
+}
+
+
+/***   MODAL SCREENS   ***/
+#presentacion, #infoTecnica, #videoclips, #otrosTrabajos{
+  display: none;
+  text-align: justify;
+  cursor: default;
+}
+
+h3{
+  color: black !important;
+  margin-bottom: 20px !important;
+}
+.container{
+  border-radius: 3%;
+  padding: 1.5em 2em;
+  margin: 5% auto;
+  background: rgb(255, 255, 255);
+  box-shadow: .5em .5em .5em .5em rgba(0, 0, 0, .4);
+  width: 75%;
+  min-width: 300px;
+  max-width: 600px;
+  min-height: 200px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.close{
+  position: absolute; 
+  top: 5px; 
+  right: 5px;
+  color: Black;
+  text-align: center;
+}
+
+
+/***  videoclips slider ***/
+.gallery-item-wrapper {
+  margin: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 200px;
+  height: 225px;
   position: relative;
 }
 
 .gallery-image {
-  height: 166px;
-  width: 295px;
-  
+  width: 200px;
+  height: 175px;
+  top: 25px;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   -o-transition: all .3s ease;
@@ -85,7 +172,6 @@ h1,h2,h3,h4 {
   right: 0;
   background: LightGrey;
   opacity: 0;
- 
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   -o-transition: all .3s ease;
@@ -101,71 +187,79 @@ h1,h2,h3,h4 {
   bottom: 0;
   left: 0;
   right: 0;
-  
   opacity: .7;
 }
 
-.text {
+.gallery-text {
   position: relative;
-  top: 165px;
   display: inline-block;
-  
-  font: 100 16px 'Lato';
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
   margin: 0 auto;
   text-align: center;
-  width: 295px;
+  width: 200px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #111;
-  color: #fff;
-  border-top: 1px solid #eee;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   letter-spacing: .7px;
   line-height: 1.2;
   cursor: default;
+  background: #C9D6FF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
-.span-text {
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  font-size: 19px;
-  font-family: 'Alegreya Sans SC', sans-serif;
+.gallery-description{
+  position: relative;
+  display: inline-block;
+  top: 150px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  width: 200px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: default;
+  background: #C9D6FF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
-#masVideos{
-  color: black;
-  border: 2px solid black;
+.moreProjectsWraper{
+  width: 100%;
   text-align: center;
 }
 
-#masVideos:hover {
-  background: GreenYellow;
+#moreProjects{
+  font-size: 1.8vw;
+  font-weight: bold;
+  background-color: white;
+  box-shadow: 2px 2px 6px #999999;
+  -moz-box-shadow: 2px 2px 6px #999999;
+  -webkit-box-shadow: 2px 2px 6px #999999;
+  letter-spacing: .7px;
+  line-height: 1.2;
 }
 
-#contacto{
-  /*  https://uigradients.com/#  Honey Dew*/
-  background: #43C6AC; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #43C6AC , #F8FFAE); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #43C6AC , #F8FFAE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+#moreProjects:hover {
+  background: Lavender;
+  color: Black !important;
 }
 
-.contactIcons{
+.sliderContainer{
   text-align: center;
-  color: steelblue; 
-  font-size: 3em;
-  margin: 20px;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.30);
+  position: relative;
+  overflow: hidden;
 }
 
-.container {
-  border-radius: 5%;
-  width: 60vw;
-  min-width: 20em;
-  max-width: 45em;
-  padding: 0.5em 0.5em;
-  margin: 5% auto;
-  background: rgba(255, 255, 255, .75);
-  box-shadow: .5em .5em .5em rgba(0, 0, 0, .4);
+#slider {
+  display: flex;
+  width: 400%;
 }
+
+.slider__section {width: 100%;}
