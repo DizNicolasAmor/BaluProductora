@@ -186,16 +186,21 @@ is displayed along on a large screen, simply do nothing. */
   
   //videoclips slider
   var slider = $('#slider'),
+      
       moveSlider = function() {
-        slider.animate({marginLeft:'-=200%'} ,700, function(){
+        slider.animate({
+          marginLeft:'-'+200+'%'
+        } ,700, function(){
           $('#slider .slider__section:first').insertAfter('#slider .slider__section:last');
-          slider.css('margin-left', '-100%');
+          slider.css('margin-left', '-'+100+'%');
         });
       }
 
   $('#slider .slider__section:first').insertAfter('#slider .slider__section:last');
-  slider.css('margin-left', '-100%');
+  slider.css('margin-left', '-'+100+'%');
   
-  $('#moreProjects').click(moveSlider());
-
+  $('#moreProjects').on('click',function() {
+    moveSlider();
+  });
+  
 });
