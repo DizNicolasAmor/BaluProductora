@@ -5,15 +5,38 @@
 
 $(document).ready(function() {
 
+
   var backgroundID = 1, 
-      footerActive = false; 
+      footerActive = false, 
+      presentacionActive = false, 
+      infoTecnicaActive = false, 
+      videoclipsActive = false, 
+      otrosTrabajosActive = false;
 
   function reset(){
-    //close modal
-    //...my code here... 
-
+    //close modal 
+    if(presentacionActive){
+      presentacionActive = false;
+      $("#background").animate({opacity: "1"}, 500);
+      $('#presentacion').fadeOut('slow');
+    }  
+    if(infoTecnicaActive){
+      infoTecnicaActive = false;
+      $("#background").animate({opacity: "1"}, 500);
+      $('#infoTecnica').fadeOut('slow');
+    }  
+    if(videoclipsActive){
+      videoclipsActive = false;
+      $("#background").animate({opacity: "1"}, 500);
+      $('#videoclips').fadeOut('slow');
+    }
+    if(otrosTrabajosActive){
+      otrosTrabajosActive = false;
+      $("#background").animate({opacity: "1"}, 500);
+      $('#otrosTrabajos').fadeOut('slow');
+    }
     //reset footer animations
-    if(footerActive = true){
+    if(footerActive){
       footerActive = false;
       $('footer').animate({height: '-=20%'}, 800);
       $('#footerIcons').animate({fontSize: '1em', marginLeft: '-=20%'}, "slow");
