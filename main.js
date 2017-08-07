@@ -119,9 +119,60 @@ is displayed along on a large screen, simply do nothing. */
     });
   });
 
-  //contacto -> footer
+
+  //  *** MENU BUTTONS ***
+    //presentacion
+  $('#menuPresentacion').click(function(){
+    if(!presentacionActive){
+      reset();
+      presentacionActive = true;
+      $("#background").animate({opacity: "0.5"}, 500);
+      $('#presentacion').show('slow');
+      $('.close').click(function(){
+        reset()
+      });
+    }
+  });
+    //info técnica
+  $('#menuInfoTecnica').click(function(){
+    if(!infoTecnicaActive){
+      reset();
+      infoTecnicaActive = true;
+      $("#background").animate({opacity: "0.5"}, 500);
+      $('#infoTecnica').show('slow');
+      $('.close').click(function(){
+        reset()
+      });
+    }
+  });
+    //videoclips
+  $('#menuVideoclips').click(function(){
+    if(!videoclipsActive){
+      reset();
+      videoclipsActive = true;
+      $("#background").animate({opacity: "0.5"}, 500);
+      $('#videoclips').show('slow');
+      $('.close').click(function(){
+        reset()
+      });
+    }
+  });
+    //otros trabajos
+  $('#menuOtrosTrabajos').click(function(){
+    if(!otrosTrabajosActive){
+      reset();
+      otrosTrabajosActive = true;
+      $("#background").animate({opacity: "0.5"}, 500);
+      $('#otrosTrabajos').show('slow');
+      $('.close').click(function(){
+        reset()
+      });
+    }
+  });
+    //contacto -> footer
   $('#menuContacto').click(function(){
     if(!footerActive){
+      reset();
       footerActive = true;
       $('footer').animate({height: '+=20%'}, 800);
       $('#footerIcons').animate({fontSize: '1.5em', marginLeft: '+=20%'}, "slow");
@@ -132,9 +183,7 @@ is displayed along on a large screen, simply do nothing. */
     }
   });
 
-
-  //...modal: container appear and others... 
-
+  
   //videoclips slider
   var slider = $('#slider'),
       moveSlider = function() {
