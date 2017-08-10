@@ -140,6 +140,23 @@ h3{
 }
 
 
+#cuerpoOtrosTrabajos{
+  font-size: 3vw !important;
+  color: DarkSlateGray !important;
+}
+#cuerpoOtrosTrabajos:after{
+  display: inline-block;
+  height: 3vw;
+  width: 2px;
+  background: DarkSlateGray;
+  content: '';
+  position: relative;
+  top: 7px;
+  -webkit-animation: blink .8s infinite;
+  animation: blink .8s infinite;
+  }
+
+
 /***  videoclips slider ***/
 .gallery-item-wrapper {
   margin: 10px;
