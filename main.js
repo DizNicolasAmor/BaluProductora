@@ -127,7 +127,13 @@ is displayed along on a large screen, simply do nothing. */
       reset();
       presentacionActive = true;
       $("#background").animate({opacity: "0.5"}, 500);
-      $('#presentacion').show('slow');
+      $('#tituloPresentacion').hide();
+      $('#cuerpoPresentacion').hide();
+      $('#presentacion').show('slow', function(){
+        $('#tituloPresentacion').slideDown(1200, function(){
+          $('#cuerpoPresentacion').slideDown(1200);
+        });
+      });
       $('.close').click(function(){
         reset()
       });
@@ -139,7 +145,13 @@ is displayed along on a large screen, simply do nothing. */
       reset();
       infoTecnicaActive = true;
       $("#background").animate({opacity: "0.5"}, 500);
-      $('#infoTecnica').show('slow');
+      $('#tituloInfoTecnica').hide();
+      $('#cuerpoInfoTecnica').hide();
+      $('#infoTecnica').show('slow', function(){
+        $('#tituloInfoTecnica').slideDown(1200, function(){
+          $('#cuerpoInfoTecnica').slideDown(1200);
+        });
+      });
       $('.close').click(function(){
         reset()
       });
@@ -163,7 +175,13 @@ is displayed along on a large screen, simply do nothing. */
       reset();
       otrosTrabajosActive = true;
       $("#background").animate({opacity: "0.5"}, 500);
-      $('#otrosTrabajos').show('slow');
+      $('#tituloOtrosTrabajos').hide();
+      $('#cuerpoOtrosTrabajos').hide();
+      $('#otrosTrabajos').show('slow', function(){
+        $('#tituloOtrosTrabajos').slideDown(1200, function(){
+          $('#cuerpoOtrosTrabajos').show();
+        });
+      });
       $('.close').click(function(){
         reset()
       });
