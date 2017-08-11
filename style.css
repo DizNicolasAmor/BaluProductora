@@ -139,7 +139,6 @@ h3{
   text-align: center;
 }
 
-
 #cuerpoOtrosTrabajos{
   font-size: 3vw !important;
   color: DarkSlateGray !important;
@@ -160,15 +159,15 @@ h3{
 /***  videoclips slider ***/
 .gallery-item-wrapper {
   margin: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: inline-block;
-  width: 200px;
+  width: 220px;
   height: 225px;
   position: relative;
 }
 
 .gallery-image {
-  width: 200px;
+  width: 220px;
   height: 175px;
   top: 25px;
   -webkit-transition: all .3s ease;
@@ -214,7 +213,7 @@ h3{
   font-weight: bold;
   margin: 0 auto;
   text-align: center;
-  width: 200px;
+  width: 220px;
   padding-top: 10px;
   padding-bottom: 10px;
   border-top-left-radius: 5px;
@@ -222,10 +221,8 @@ h3{
   letter-spacing: .7px;
   line-height: 1.2;
   cursor: default;
-  background: #C9D6FF;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: black;
+  color: white;
 }
 
 .gallery-description{
@@ -235,16 +232,14 @@ h3{
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
-  width: 200px;
+  width: 220px;
   padding-top: 5px;
   padding-bottom: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   cursor: default;
-  background: #C9D6FF;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: black;
+  color: white;
 }
 
 .moreProjectsWraper{
@@ -266,6 +261,7 @@ h3{
 #moreProjects:hover {
   background: Lavender;
   color: Black !important;
+  border: 1px solid black;
 }
 
 .sliderContainer{
